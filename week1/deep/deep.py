@@ -19,7 +19,7 @@ if question=="forty-two" or question=="forty two" :
 
     print("Yes")
 
-elif question==42:
+elif question=="42":
 
     print("Yes")
 
