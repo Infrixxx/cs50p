@@ -18,7 +18,7 @@ filetypes={
         "jpeg":"image",
         "png":"image",
         "pdf":"application",
-        "txt":"document",
+        "txt":"text",
         "zip":"application",
         "plain":"application",
         "octet-stream":"application"
@@ -31,6 +31,9 @@ for i in filetypes:
         break;
     if splited[-1]=="jpg":
         splited[-1]="jpeg"
+
+    if  splited[-1]=="txt":
+        splited[-1]="plain"
 
 print(type+"/"+splited[-1])
 
