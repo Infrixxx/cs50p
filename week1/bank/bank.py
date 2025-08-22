@@ -19,11 +19,14 @@ N.B
     ignore any leading white space
 
     The input is case insensitive.
+****-------------------------------------------****
+    Going to be using indexing to solve this and elif statements
+
 """
 
-greeting=input("Greeting: ").strip().lower()
+greeting=input("Greeting: ").lower().strip()
 
-if greeting=="hello":
+if greeting[0:5]=="hello":
     print("$0")
 elif greeting[0]=="h":
     print("$20")
