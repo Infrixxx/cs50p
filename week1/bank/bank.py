@@ -21,7 +21,7 @@ N.B
     The input is case insensitive.
 """
 
-greeting=input("Greeting").strip().lower()
+greeting=input("Greeting: ").strip().lower()
 
 if greeting=="hello":
     print("$0")
