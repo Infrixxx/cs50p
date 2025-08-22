@@ -9,31 +9,23 @@ Output ----> filetype/file-extentions
 """
 
 file_name=input("File name: ")
+no_space_low=file_name.strip().lower()  #strip all white spaces
+splited=no_space_low.split(".")         #split into array
+extension=splited[-1]                   #take ext from array
 
-splited=file_name.lower().split(".")
 
-filetypes={
-        "gif":"image",
-        "jpg":"image",
-        "jpeg":"image",
-        "png":"image",
-        "pdf":"application",
-        "txt":"text",
-        "zip":"application",
-        "octet-stream":"application"
-        }
+filetypes = {
+    "gif": "image/gif",
+    "jpg": "image/jpeg",
+    "jpeg": "image/jpeg",
+    "png": "image/png",
+    "pdf": "application/pdf",
+    "txt": "text/plain",
+    "zip": "application/zip"
+}
 
-for i in filetypes:
-    if splited[-1]==i:
-        type = filetypes[splited[-1]]
-	
-	    if splited[-1]=="jpg":
-		    splited[-1]="jpeg"
-          	print(type+"/"+splited[-1])
+if extension in filetypes:
+    print (filetypes[extension])
 
-	    elif  splited[-1]=="txt":
-        	    splited[-1]="plain"
-            	print(type+"/"+splited[-1])
-    else:
-        print(splited[-1])
-        break;
+else:
+    print ("application/octet-stream")
