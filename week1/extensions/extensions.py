@@ -29,5 +29,8 @@ for i in filetypes:
     if splited[-1]==i:
         type = filetypes[splited[-1]]
         break;
+    if splited[-1]=="jpg":
+        splited[-1]="jpeg"
+
 print(type+"/"+splited[-1])
 
