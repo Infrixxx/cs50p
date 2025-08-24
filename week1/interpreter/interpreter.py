@@ -10,4 +10,9 @@ A program that
 
 user_expression=input("Expression: ")
 
-print(user_expression)
+no_white=user_expression.strip() #remove white spaces.
+x,y,z=no_white.split(" ")
+
+print(x)
+print(y)
+print(z)
