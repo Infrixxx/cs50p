@@ -21,19 +21,16 @@ def convert(time):
     time_minute=int(time_array[1])/60 
     final_time=float(int(time_array[0])+time_minute)
 
-	return print(final_time)
+    return print(final_time)
 
 convert(time)
-"""
-if int(time[0])>=7 and int(time[0])<=8:
-    if int(time[1])>=0 and int(time[1])<=59:
+
+if int(final_time[0])>=7 and int(final_time[0])<=8:
         print("breakfast time")
 
-elif int(time[0])>=12 and int(time[0])<=13:
-    if int(time[1])>=0 and int(time[1])<=59:
+elif int(final_time[0])>=12 and int(final_time[0])<=13:
         print("lunch time")
 
-elif int(time[0])>=18 and int(time[0])<=19:
-    if int(time[1])>=0 and int(time[1])<=59:
+elif int(final_time[0])>=18 and int(final_time[0])<=19:
         print("dinner time")
 """
