@@ -25,11 +25,11 @@ def convert(time):
 
 final_time=convert(time)
 
-if final_time[0]>=7 and final_time[0]<=8:
+if final_time>=7 and final_time<=8:
         print("breakfast time")
 
-elif final_time[0]>=12 and final_time[0]<=13:
+elif final_time>=12 and final_time<=13:
         print("lunch time")
 
-elif final_time[0]>=18 and final_time[0]<=19:
+elif final_time>=18 and final_time<=19:
         print("dinner time")
