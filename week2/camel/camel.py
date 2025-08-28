@@ -8,13 +8,49 @@ camel case : first word is small letters, following words start with a capital l
 
 snake case : words are seperated by underscores("_")
 
+
+proposed method:
+
+for each character in camelCaseString:
+
+    if character is uppercase:
+
+        append the current container to listo
+
+        container = "" # Start a new word
+
+        convert the uppercase character to lowercase and add it to the new container
+
+    else:
+
+        add the character to the current container
+
+After the loop, append the final container to listo
+
 """
 
-def main()
+def main():
+    snake()
 
-
-def snake()
-
-
-if __name__==__main__:
+def snake():
+    camel=input("camelCase: ")
+    container=""
+    listo=[]
+  
+    for i in camel:
+        
+        if i>="A" and i<="Z":
+            listo.append(container)
+            container=i.lower()
+        else:
+            container=container+i
+            
+    listo.append(container)
+    
+    
+    len(listo)
+    
+    return print(listo)
+    
+if __name__=="__main__":
     main()
