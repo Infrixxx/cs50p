@@ -8,11 +8,21 @@ A program that
 --> outputs as a floating-point value
 """
 
-user_expression=input("Expression: ")
+user_expression = input("Expression: ")
 
-no_white=user_expression.strip() #remove white spaces.
-x,y,z=no_white.split(" ")
+parts = user_expression.strip().split() #remove white space and also split into arrayi
+x, y, z = parts
 
-print(x)
-print(y)
-print(z)
+num1 = float(x)
+num2 = float(z)
+
+if y == '+':
+    result = num1 + num2
+elif y == '-':
+    result = num1 - num2
+elif y == '*':
+    result = num1 * num2
+elif y == '/':
+    result = num1 / num2
+
+print(result)
