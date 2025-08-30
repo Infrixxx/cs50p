@@ -47,10 +47,22 @@ def snake():
             
     listo.append(container)
     
+    snake=""
     
-    len(listo)
+
+    list_len=len(listo)-1
+    final_word=listo[list_len]
+
+    for i in listo:
+        if i=="":
+            continue
+        else:
+            if final_word != i:
+                snake+=i+"_"
+            else:
+                snake+=i
     
-    return print(listo)
+    return print(snake)
     
 if __name__=="__main__":
     main()
