@@ -5,7 +5,7 @@ minimum, two character, maximum 6.
 
 Numbers cannot be used in the middle of a plate;
 they must come at the end
-No periods, spaces, or punctuation marks are allowed.i
+No periods, spaces, or punctuation marks are allowed.
 """
 
 def main():
@@ -15,19 +15,20 @@ def main():
     else:
         print("Invalid")
 
-
 def is_valid(s):
-
-    #check length of s
-    limit=len(s)
-    if limit <2 or limit >6:
-        return false
+    # Check length first
+    if len(s) < 2 or len(s) > 6:
+        return False
     
-    #if all characters are alpha numerici
-        for i in s:
-            if not char.isalnum():
+    # Check first two characters are letters
+    if not s[0].isalpha() or not s[1].isalpha():
+        return False
+    
+    # Check all characters are alphanumeric
+    for char in s:
+        if not char.isalnum():
             return False
-
+    
     # Check numbers are only at the end and first number isn't '0'
     found_number = False
     for char in s:
@@ -40,5 +41,5 @@ def is_valid(s):
             
     return True
 
-if __name__=="__main__":
+if __name__ == "__main__":
     main()
