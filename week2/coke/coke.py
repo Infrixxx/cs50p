@@ -22,12 +22,12 @@ def due():
             pay=int((input("Insert coin: ")))
             if ( pay == 25 or pay == 10 or pay == 5):
                 am_due=int(am_due)-int(pay)
-                        elif am_due==0:
-                            print("Change Owed: " + str(am_due))
-                            break
-                        elif am_due < 0:
-                            Change=print("Change Owed: " + str(int(am_due)*-1))
-                            break
+                if am_due==0:
+                    print("Change Owed: " + str(am_due))
+                    break
+                elif am_due < 0:
+                    Change=print("Change Owed: " + str(int(am_due)*-1))
+                    break
             else:
                 continue
 
