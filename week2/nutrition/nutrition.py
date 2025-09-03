@@ -45,12 +45,10 @@ def calories():
 
 
 
-    fruit=(input("Item: "))
+    fruit=(input("Item: ")).strip().lower()
 
-    if fruit not in fruit_calories:
-        return False
-    else:
-        return print(f"Calories : {fruit.title()}":{fruit_calories[fruit]})
+    if fruit in fruit_calories:
+        return print(f"Calories: {fruit_calories[fruit]}")
 
-if __"name"__=="__main__":
+if __name__=="__main__":
     main()
