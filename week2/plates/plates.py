@@ -64,12 +64,10 @@ def is_valid(s):
                             if s[i]=="0":
                                 return False
                             else:
-                                for i in range(3,len(s)):
-                                    if not s[i].isnumeric():
+                                if not s[i:].isnumeric():
                                         return False
-                                    break
-                        else:
-                            return True
+                                break
+                    return True
         else:
             return False
     else:
