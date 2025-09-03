@@ -67,8 +67,7 @@ def is_valid(s):
                                 for i in range(3,len(s)):
                                     if not s[i].isnumeric():
                                         return False
-                                    else:
-                                        return True
+                                    break
                         else:
                             return True
         else:
