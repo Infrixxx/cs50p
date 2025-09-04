@@ -11,19 +11,19 @@ prompts the user for items:
     User input case insensitively.
 
 Pseudo code:
-    
+
     create an empty dictionary
     when the user enters an item, assign the item to the dictionary with a value.
     everytime the user enters an item, check if it's in the dictionary.
         --> if it is in the dictionary, add to the value of the item in the dictionary.
         --> if it is not in the dictionary, initialize it to one.
-    
+
     sort the keys in alphabetical order.
-    
+
     return the number, with prefix of number of items, user inputted.
 
     user input is case insensitive.
-    
+
     do this until we reach the end of the file "user inputs ctrl-d"
 
 """
@@ -49,4 +49,4 @@ def grocery():
         sorted_items = sorted(food_list.keys())
 
         for item in sorted_items:
-            print(f"food_list[item] {item.upper()}
+            print(f"food_list[item] {item.upper()}")
