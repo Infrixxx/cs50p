@@ -8,6 +8,12 @@ month/day/year and set it to YYYY-MM-DD
 So it can be in format of MM/DD/YYYY
 or
 Month_as_word DD, YYYY 
+
+Two date cases:
+---> case with "\" in str
+    --->has to be start with digit between 1-12, if not reprompt.
+---> case with "," in str
+    ---> has to start with month, if not, reprompt
 """
 
 def main():
@@ -31,10 +37,17 @@ def date():
     }
 
     while True:
-        mm, dd, yy = input("Date: ").strip().split("/")  #MM/DD/YYYY
-        mm, dd, yy = int(mm), int(dd), int(yy)
+        try:
+            date_str=("Date: ").strip()
 
-        return print(f"{yy}-{mm:02d}-{dd:02d}")
+            if '\' in date_str:
+                mm, dd, yy = input("Date: ").strip().split("/")  #MM/DD/YYYY
+                mm, dd, yy = int(mm), int(dd), int(yy)
+                return print(f"{yy}-{mm:02d}-{dd:02d}")
+            elif "," in date_str:
+            else:
+        except(ValueError,KeyError):
+            continue
 
 if __name__=="__main__":
     main()
