@@ -28,12 +28,17 @@ def fraction():
     while True:
         try:
             number=(input("Fraction: ")).strip().split("/")
-        
-            if number[0].isnumeric and number[1].isnumeric:
-                if int(number[0])>=0 and int(number[1])>=0:
-                    x=int(number[0])
-                    y=int(number[1])
-        
+            x=int(number[0])
+            y=int(number[1])
+
+            percentage=((x/y)*100)
+
+            if x > y:
+                continue #the numerator cannot be bigger than the denominator
+
+            else:
+
+                    
                     return print(x,y)
                     
         except(ValueError, ZeroDivisionError, IndexError):
