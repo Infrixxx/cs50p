@@ -31,10 +31,10 @@ def date():
     }
 
     while True:
-        date_us=input("Date: ").strip().split("/")  #MM/DD/YYYY
-        date=date_us
+        mm, dd, yy = input("Date: ").strip().split("/")  #MM/DD/YYYY
+        mm, dd, yy = int(mm), int(dd), int(yy)
 
-        return print(f"{date[2]}-{date[0]}-{date[1]}")
+        return print(f"{yy}-{mm:02d}-{dd:02d}")
 
 if __name__=="__main__":
     main()
