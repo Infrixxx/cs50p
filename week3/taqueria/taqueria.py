@@ -33,13 +33,13 @@ def total():
     total=0
     
     while True:
-        food=(input()).strip().lower().title()
-
-        if food in menu:
-            total+=menu[food]
-        else:
-            continue
-    return print(total)
-
+        try:
+            food=(input()).strip().lower().title()
+    
+            if food in menu:
+                total+=menu[food]
+                print(f"${total.2f}")
+        except(EOFerror):
+            break
 if __name__=="__main__":
     main()
