@@ -49,4 +49,4 @@ def grocery():
         sorted_items = sorted(food_list.keys())
 
         for item in sorted_items:
-            print(f"food_list[item] {item.upper()}
+            print(f"food_list[item] {item.upper()}")
