@@ -30,14 +30,10 @@ def fraction():
             number=(input("Fraction: ")).strip().split("/")
             x=int(number[0])
             y=int(number[1])
-
-            percentage=((x/y)*100)
-
             if x > y:
-                continue #the numerator cannot be bigger than the denominator
-
-            else:
-
+                continue #the numerator cannot be bigger than the denominator, so ask again
+                        
+            percentage=((x/y)*100)
                     
                     return print(x,y)
                     
