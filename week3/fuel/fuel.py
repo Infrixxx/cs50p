@@ -20,7 +20,13 @@ def main():
 def fraction():
     number=(input("Fraction: ")).strip().split("/")
 
-    return print(number)
+    if number[0].isnumeric and number[1].isnumeric:
+        if int(number[0])>=0 and int(number[1])>=0:
+            x=int(number[0])
+            y=int(number[1])
+
+            return print(x,y)
+
 
 if __name__=="__main__":
     main()
