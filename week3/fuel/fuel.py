@@ -33,7 +33,9 @@ def fraction():
             if x > y:
                 continue #the numerator cannot be bigger than the denominator, so ask again
                         
-            percentage=int((x/y)*100)
+            percentage=((x/y)*100)
+            percentage=round(percentage,0)
+            percentage=int(percentage)
 
             if percentage >= 99:
                 return print("F")
