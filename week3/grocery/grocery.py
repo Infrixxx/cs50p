@@ -50,3 +50,6 @@ def grocery():
 
     for item in sorted_items:
         print(f"{food_list[item]} {item.upper()}")
+
+if __name__=="__main__":
+    main()
