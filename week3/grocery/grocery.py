@@ -36,7 +36,7 @@ def grocery():
     food_list={}
     while True:
         try:
-            item=input("").lower().strip()
+            item=input().lower().strip()
 
             if item in food_list:
                 food_list[item]+=1
@@ -46,7 +46,7 @@ def grocery():
         except(EOFError):
             break
 
-        sorted_items = sorted(food_list.keys())
+    sorted_items = sorted(food_list.keys())
 
-        for item in sorted_items:
-            print(f"food_list[item] {item.upper()}")
+    for item in sorted_items:
+        print(f"{food_list[item]} {item.upper()}")
