@@ -47,8 +47,9 @@ def date():
                     mm, dd, yy = int(mm), int(dd), int(yy)
                     return print(f"{yy}-{mm:02d}-{dd:02d}")
             
-            elif "," in date_str:
-                continue
+            elif "," in date_str: #month_name date, year
+                month_name=date_str.split(" ")
+                return print("month name")
             
             else:
                 continue
