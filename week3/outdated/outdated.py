@@ -31,9 +31,10 @@ def date():
     }
 
     while True:
-        date_us=input("Date: ").strip().split("/")
+        date_us=input("Date: ").strip().split("/")  #MM/DD/YYYY
         date=date_us
-        return print(date)
+
+        return print(f"{date[2]}_{date[0]}_{date[1]}")
 
 if __name__=="__main__":
     main()
