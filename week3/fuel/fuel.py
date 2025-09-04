@@ -31,7 +31,7 @@ def fraction():
             x=int(number[0])
             y=int(number[1])
             if x<0 or y<0:
-                        continue:
+                continue
             elif x > y:
                 continue #the numerator cannot be bigger than the denominator, so ask again
                         
