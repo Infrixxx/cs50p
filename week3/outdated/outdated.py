@@ -34,7 +34,7 @@ def date():
         date_us=input("Date: ").strip().split("/")  #MM/DD/YYYY
         date=date_us
 
-        return print(f"{date[2]}_{date[0]}_{date[1]}")
+        return print(f"{date[2]}-{date[0]}-{date[1]}")
 
 if __name__=="__main__":
     main()
