@@ -40,12 +40,19 @@ def date():
         try:
             date_str=("Date: ").strip()
 
-            if '\' in date_str:
+            if "/" in date_str:
                 mm, dd, yy = input("Date: ").strip().split("/")  #MM/DD/YYYY
-                mm, dd, yy = int(mm), int(dd), int(yy)
-                return print(f"{yy}-{mm:02d}-{dd:02d}")
+                
+                if (mm>=1 and mm<=12) and (dd>=1 and dd<=31) and (yy>=1):
+                    mm, dd, yy = int(mm), int(dd), int(yy)
+                    return print(f"{yy}-{mm:02d}-{dd:02d}")
+            
             elif "," in date_str:
+                continue
+            
             else:
+                continue
+
         except(ValueError,KeyError):
             continue
 
