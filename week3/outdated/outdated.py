@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 """
 I need to take a date in 
 
@@ -38,21 +36,26 @@ def date():
 
     while True:
         try:
-            date_str=("Date: ").strip()
+
+            date_str=input("Date: ").strip()
 
             if "/" in date_str:
-                mm, dd, yy = input("Date: ").strip().split("/")  #MM/DD/YYYY
-                
-                if (mm>=1 and mm<=12) and (dd>=1 and dd<=31) and (yy>=1):
-                    mm, dd, yy = int(mm), int(dd), int(yy)
-                    return print(f"{yy}-{mm:02d}-{dd:02d}")
+                mm, dd, yy = date_str.strip().split("/")  #MM/DD/YYYY
+                mm, dd, yy = int(mm), int(dd), int(yy)
             
             elif "," in date_str: #month_name date, year
-                month_name=date_str.split(" ")
-                return print("month name")
-            
+                month_name, rest = date_str.split(" ",1) #split it only once, at first white space
+                mm = months[month_name]
+                rest = rest.replace(","," ")
+                dd, yy = rest.split()
+                dd, yy = int(dd), int(yy)
+
             else:
                 continue
+
+            if (1 <= mm <= 12) and (1 <= dd <= 31) and (yy>=1):
+                print(f"{yy:04d}-{mm:02d}-{dd:02d}")
+                break
 
         except(ValueError,KeyError):
             continue
