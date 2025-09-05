@@ -11,13 +11,16 @@ def main():
 def emojize():
     try:
         emojis={
-             ":1st_place_medal:":"🥇"
+             ":1st_place_medal:":"🥇",
              ":thumbs_up:":"👍",
              ":ear:":"👂",
              "candy:":"🍬",
-             ":cooked_rice:":"🍚"}
-
+             ":cooked_rice:":"🍚",
+             ":ice_cream:":"🍨"}
         key=input("Input: ")
+        
+        
+
 
         return print(f"Output: {emojis[key]}") 
     except (KeyError):
