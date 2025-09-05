@@ -12,7 +12,11 @@ def emojize():
     try:
         emojis={
              ":1st_place_medal:":"🥇"
-                }
+             ":thumbs_up:":"👍",
+             ":ear:":"👂",
+             "candy:":"🍬",
+             ":cooked_rice:":"🍚"}
+
         key=input("Input: ")
 
         return print(f"Output: {emojis[key]}") 
