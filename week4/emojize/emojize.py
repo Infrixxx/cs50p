@@ -18,11 +18,15 @@ def emojize():
              ":cooked_rice:":"🍚",
              ":ice_cream:":"🍨"}
         key=input("Input: ")
-        
-        
+        keys=key.strip().split() 
+        output=[] 
+        for key in keys:
+            if key in emojis:
+                output.append(emojis[word])
+            else:
+                continue
 
-
-        return print(f"Output: {emojis[key]}") 
+        return print(f"Output: {output}") 
     except (KeyError):
         return False
 if __name__=="__main__":
