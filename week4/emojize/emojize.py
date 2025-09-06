@@ -22,7 +22,7 @@ def emojize():
         output=[] 
         for key in keys:
             if key in emojis:
-                output.append(emojis[word])
+                output.append(emojis[key])
             else:
                 continue
 
