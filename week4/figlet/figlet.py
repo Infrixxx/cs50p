@@ -18,6 +18,7 @@ if len(sys.argv) == 3:
             sys.exit(1)
     else:
         print("Invalid usage")
+        sys.exit(1)
 elif len(sys.argv)>1:
     print("Invalid usage")
     sys.exit(1)
