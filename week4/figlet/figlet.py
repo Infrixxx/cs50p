@@ -14,12 +14,12 @@ if len(sys.argv) == 3:
         if font_name in figlet.getFonts():
             figlet.setFont(font=font_name)
         else:
-            print("Invalid font")
+            print("Invalid usage")
             sys.exit(1)
     else:
-        print("Usage : figlet.py [--f FONT_NAME]")
+        print("Invalid usage")
 elif len(sys.argv)>1:
-    print("Usage : figlet.py [--f FONT_NAME]")
+    print("Invalid usage")
     sys.exit(1)
 
 input_str=input("Input: ")
