@@ -16,7 +16,8 @@ def emojize():
              ":ear:":"👂",
              ":candy:":"🍬",
              ":cooked_rice:":"🍚",
-             ":ice_cream:":"🍨"}
+             ":ice_cream:":"🍨",
+             ":earth_asia:":"🌏"}
         key=input("Input: ")
         keys=key.strip().split() 
  
