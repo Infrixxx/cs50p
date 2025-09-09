@@ -3,31 +3,11 @@
 """
 prompts the user for a string in English
 Outputs the emojized version, of the string.
+use the emoji library to do this.
 """
 
-def main():
-    return emojize()
+import emoji
 
-def emojize():
-    try:
-        emojis={
-             ":1st_place_medal:":"🥇",
-             ":thumbs_up:":"👍",
-             ":ear:":"👂",
-             ":candy:":"🍬",
-             ":cooked_rice:":"🍚",
-             ":ice_cream:":"🍨",
-             ":earth_asia:":"🌏"}
-        key=input("Input: ")
-        keys=key.strip().split() 
- 
-        for i,key in enumerate(keys):
-            if key in emojis:
-                keys[i]=emojis[key]
-        
-        output_str=" ".join(keys)
-        return print(f"Output: {output_str}") 
-    except (KeyError):
-        return False
-if __name__=="__main__":
-    main()
+input_str=input("Input: ").strip()
+emojized= emoji.emojize(input_str,language="alias")
+print(f"Output: {emojized} ")
