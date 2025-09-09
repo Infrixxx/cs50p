@@ -5,7 +5,7 @@ from pyfiglet import Figlet
 
 figlet=Figlet()
 
-if len(sys.argv == 3):
+if len(sys.argv) == 3:
 #to take the arguments from the system:
 
     if sys.argv[1]=="-f" or sys.argv[1]=="--font":
@@ -16,7 +16,6 @@ if len(sys.argv == 3):
         else:
             print("Invalid font")
             sys.exit(1)
-else:
 
 input_str=input("Input: ")
 print(f"Output: {figlet.renderText(input_str)}")
