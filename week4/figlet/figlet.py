@@ -3,18 +3,20 @@
 import sys
 from pyfiglet import Figlet
 
-
-#to take the arguments from the system:
-
-print(f"number of arguments is {len(sys.argv)}")
-
 figlet=Figlet()
 
-if sys.argv[1]=="-f" or sys.argv[1]=="--font":
-    font_name=sys.argv[2]
+if len(sys.argv == 3):
+#to take the arguments from the system:
 
-if font_name in figlet.getFonts():
-    figlet.setFont(font=f)
+    if sys.argv[1]=="-f" or sys.argv[1]=="--font":
+        font_name=sys.argv[2]
+    
+        if font_name in figlet.getFonts():
+            figlet.setFont(font=f)
+        else:
+            print("Invalid font")
+            sys.exit(1)
+else:
 
 input_str=input("Input: ")
 print(f"Output: {figlet.renderText(input_str)}")
