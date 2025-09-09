@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 """
-prompts the user for a str in English
-Outputs the emojized veraion, of the string.
+prompts the user for a string in English
+Outputs the emojized version, of the string.
 """
 
 def main():
@@ -14,19 +14,18 @@ def emojize():
              ":1st_place_medal:":"🥇",
              ":thumbs_up:":"👍",
              ":ear:":"👂",
-             "candy:":"🍬",
+             ":candy:":"🍬",
              ":cooked_rice:":"🍚",
              ":ice_cream:":"🍨"}
         key=input("Input: ")
         keys=key.strip().split() 
-        output=[] 
-        for key in keys:
+ 
+        for i,key in enumerate(keys):
             if key in emojis:
-                output.append(emojis[key])
-            else:
-                continue
-
-        return print(f"Output: {output}") 
+                keys[i]=emojis[key]
+        
+        output_str=" ".join(keys)
+        return print(f"Output: {output_str}") 
     except (KeyError):
         return False
 if __name__=="__main__":
