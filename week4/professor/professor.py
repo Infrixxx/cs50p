@@ -20,7 +20,7 @@ def main():
 def get_level():
     while True:
         try:
-            level=input("Level: ")
+           level=input("Level: ")
             if level.isnumeric() and int(level) > 1
                 level=int(level)
 
