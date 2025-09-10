@@ -10,7 +10,8 @@ import sys
 
 def main():
     arguments_check()
-    
+    get_current_price()    
+
 def arguments_check():
     if len(sys.argv) < 2:
         sys.exit("Missing command-line argument")
@@ -30,4 +31,9 @@ def get_current_price():
         response = requests.get(url)
         
     except requests.RequestException:
-        continue
+        return None
+
+
+
+if __name__=="__main__":
+    main()
