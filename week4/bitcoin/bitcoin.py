@@ -29,6 +29,12 @@ def get_current_price():
         url="https://api.coinbase.com/v2/prices/BTC-USD/spot"
     
         response = requests.get(url)
+        res = response.json()
+        rate = res['bpi']['USD']['rate_float']
+
+        cost = rate * float(bitcoin_amount)
+        
+        return output = "$"+"{:,}".format(cost)
         
     except requests.RequestException:
         return None
