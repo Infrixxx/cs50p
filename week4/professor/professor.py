@@ -39,8 +39,8 @@ def generate_integer(level):
     
     if level == 1:
         for b in range(10):
-            x= random.randint(1,9)
-            y= random.randint(1,9)
+            x= random.randint(0,9)
+            y= random.randint(0,9)
             
             correct=x+y
     
