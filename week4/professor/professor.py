@@ -20,7 +20,9 @@ def main():
     score=0
     x=generate_integer(level)
     y=generate_integer(level)
-    ask(x,y)
+    for q in range(10):
+        score+=ask(x,y)
+        
     
     
     
