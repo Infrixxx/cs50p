@@ -24,7 +24,7 @@ def valid_level():
         else:
             continue
 
-valid_level()
+n=valid_level()
 print(n)
 """def main():
 
