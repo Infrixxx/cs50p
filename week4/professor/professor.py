@@ -15,24 +15,28 @@ Calculator game:
     return user score at end, number of correct answers
 """
 
-def main():
+#def main():
 
 def get_level():
     while True:
         try:
             level=input("Level: ")
             
-            if level.isnumeric() and int(level) > 1
+            if level.isnumeric() and int(level) > 1 :
+
+                level=int(level)
             
-            level=int(level)
-            
-            if level == 1 or level == 2 level:
+            if level == 1 or level == 2 or level == 3:
                 return level
                 break
         except ValueError:
              continue
 
-print(get_level())
-
+def generate_integer(level):
+    
+    if level == 1:
+        x= random.randint(1,9)
+        y= random.randint(1,9)
+    
 if __name__=="__main__":
     main()
