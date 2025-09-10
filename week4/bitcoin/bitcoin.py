@@ -12,12 +12,17 @@ def main():
     arguments_check()
     
 def arguments_check():
-    if len(sys.argv) == 1:
+def arguments_check():
+    if len(sys.argv) < 2:
         sys.exit("Missing command-line argument")
     
-    if not bitcoin_amount.isnumeric():
-            sys.exit("Command-line argument is not a number")
-    return bitcoin_amount=sys.argv[1]
+    try:
+        # Try to convert to float
+        bitcoin_amount = float(sys.argv[1])
+        return bitcoin_amount
+        
+    except ValueError: #if it cannot convert to float
+        sys.exit("Command-line argument is not a number")
 
 def get_current_price():
     try:
