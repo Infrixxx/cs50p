@@ -24,11 +24,7 @@ def get_level():
         try:
             level=input("Level: ")
             
-            if level.isnumeric() and int(level) > 0 :
-
-                level=int(level)
-            
-            if level == 1 or level == 2 or level == 3:
+            if level in [1,2,3]:
                 return level
                 break
         except ValueError:
