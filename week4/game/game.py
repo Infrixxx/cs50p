@@ -13,15 +13,16 @@ Conditions:
 """
 
 
-while True:
-    n=input("Level: ")
+def valid_level()
+    while True:
+        n=input("Level: ")
     
-    if n.isnumeric():
-        if n >=1:
-            print(f"the chosen level is {n}")
-            break
-    else:
-        continue
+        if n.isnumeric():
+            if int(n) >=1:
+                return n
+                break
+        else:
+            continue
 
 
 """def main():
