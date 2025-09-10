@@ -17,7 +17,12 @@ Calculator game:
 
 def main():
     level=get_level()
-    generate_integer(level)
+    score=0
+    x=generate_integer(level)
+    y=generate_integer(level)
+    ask(x,y)
+    
+    
     
 def get_level():
     while True:
@@ -29,59 +34,30 @@ def get_level():
                 break
         except ValueError:
              continue
+            
 
 def generate_integer(level):
-    score=0
-    
     if level == 1:
-        for b in range(10):
-            x= random.randint(0,9)
-            y= random.randint(0,9)
+
+            return random.randint(0,9)
+       elif level == 2 :       
+            return random.randint(10,99)
+        else:
+            return random.randint(100,999)
             
-            correct=x+y
-    
-            for a in range(3):
-                answer = input(f"{x} + {y} = ")
-                if int(answer) == correct:
-                    score+=1
-                    break
-                else:
-                    print("EEE")
-            print(f"{x} + {y} = {correct} ")
+def ask(x, y):
+    correct = x + y
+    for a in range(3):
+        try:
+            answer = int(input(f"{x} + {y} = "))
+            if answer == correct:
+                return 1
+        except ValueError:
+            pass
+        print("EEE")
+    print(f"{x} + {y} = {correct}")
+    return 0
 
-    elif level == 2 :
-        for b in range(10):
-            x= random.randint(10,99)
-            y= random.randint(10,99)
 
-            correct=x+y
-    
-            for a in range(3):
-                answer = input(f"{x} + {y} = ")
-                if int(answer) == correct:
-                    score+=1
-                    break
-                else:
-                    print("EEE")
-            print(f"{x} + {y} = {correct} ")
-            
-    else:
-        for b in range(10):
-            x= random.randint(100,999)
-            y= random.randint(100,999)
-
-            correct=x+y
-    
-            for a in range(3):
-                answer = input(f"{x} + {y} = ")
-                if int(answer) == correct:
-                    score+=1
-                    break
-                else:
-                    print("EEE")
-            print(f"{x} + {y} = {correct} ")
-                    
-    return print(f"Score: {score}")
-        
 if __name__=="__main__":
     main()
