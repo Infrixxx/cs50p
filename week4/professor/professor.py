@@ -51,6 +51,7 @@ def generate_integer(level):
                     break
                 else:
                     print("EEE")
+            print(f"{x} + {y} = {correct} ")
 
     elif level == 2 :
         for b in range(10):
