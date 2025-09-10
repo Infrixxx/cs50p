@@ -81,7 +81,7 @@ def generate_integer(level):
                 else:
                     print("EEE")
                     
-    return print(score)
+    return print(f"Score: {score}")
         
 if __name__=="__main__":
     main()
