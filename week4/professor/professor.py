@@ -20,15 +20,19 @@ def main():
 def get_level():
     while True:
         try:
-           level=input("Level: ")
+            level=input("Level: ")
+            
             if level.isnumeric() and int(level) > 1
-                level=int(level)
-
-                if level == 1 or level == 2 level:
-
+            
+            level=int(level)
+            
+            if level == 1 or level == 2 level:
+                return level
+                break
         except ValueError:
              continue
 
+print(get_level())
 
 if __name__=="__main__":
     main()
