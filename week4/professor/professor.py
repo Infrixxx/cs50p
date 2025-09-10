@@ -67,6 +67,8 @@ def generate_integer(level):
                     break
                 else:
                     print("EEE")
+            print(f"{x} + {y} = {correct} ")
+            
     else:
         for b in range(10):
             x= random.randint(100,999)
@@ -81,6 +83,7 @@ def generate_integer(level):
                     break
                 else:
                     print("EEE")
+            print(f"{x} + {y} = {correct} ")
                     
     return print(f"Score: {score}")
         
