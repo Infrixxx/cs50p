@@ -30,7 +30,7 @@ def adieu():
     elif fin_indx==1:
         output_str=f"{names[0]} and {names[1]}"
     else:
-        output_str=name[0]
+        output_str=names[0]
     
     print(f"Adieu, adieu, to {output_str}")
 
