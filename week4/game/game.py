@@ -24,7 +24,8 @@ def valid_level():
         else:
             continue
 
-
+valid_level()
+print(n)
 """def main():
 
 def guess(n):
