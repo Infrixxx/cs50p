@@ -19,7 +19,7 @@ def adieu():
 
     while True:
         try:
-            name=input("Name: ").strip()
+            name=input().strip()
             names.append(name)
         except(EOFError):
             break
