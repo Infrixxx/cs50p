@@ -28,7 +28,7 @@ def valid_level():
 
 def guess():
     n=valid_level()
-    answer=random.randit(1,n)
+    answer=random.randint(1,n)
     
     while True:
         
