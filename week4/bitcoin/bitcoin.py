@@ -12,7 +12,6 @@ def main():
     arguments_check()
     
 def arguments_check():
-def arguments_check():
     if len(sys.argv) < 2:
         sys.exit("Missing command-line argument")
     
