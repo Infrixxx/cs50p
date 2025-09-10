@@ -17,7 +17,7 @@ Calculator game:
 
 def main():
     level=get_level()
-    generate_interger(level)
+    generate_integer(level)
     
 def get_level():
     while True:
