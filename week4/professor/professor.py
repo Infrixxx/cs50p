@@ -15,8 +15,10 @@ Calculator game:
     return user score at end, number of correct answers
 """
 
-#def main():
-
+def main():
+    level=get_level()
+    generate_interger(level)
+    
 def get_level():
     while True:
         try:
@@ -33,10 +35,53 @@ def get_level():
              continue
 
 def generate_integer(level):
+    score=0
     
     if level == 1:
-        x= random.randint(1,9)
-        y= random.randint(1,9)
+        for b in range(10):
+            x= random.randint(1,9)
+            y= random.randint(1,9)
+            
+            correct=x+y
     
+            for a in range(3):
+                answer = input(f"{x} + {y} = ")
+                if answer == correct:
+                    score+=1
+                    break
+                else:
+                    print("EEE")
+
+    elif level == 2 :
+        for b in range(10):
+            x= random.randint(10,99)
+            y= random.randint(10,99)
+
+            correct=x+y
+    
+            for a in range(3):
+                answer = input(f"{x} + {y} = ")
+                if answer == correct:
+                    score+=1
+                    break
+                else:
+                    print("EEE")
+    else:
+        for b in range(10):
+            x= random.randint(100,999)
+            y= random.randint(100,999)
+
+            correct=x+y
+    
+            for a in range(3):
+                answer = input(f"{x} + {y} = ")
+                if answer == correct:
+                    score+=1
+                    break
+                else:
+                    print("EEE")
+                    
+    return print(score)
+        
 if __name__=="__main__":
     main()
