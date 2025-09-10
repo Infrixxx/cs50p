@@ -33,8 +33,8 @@ def get_current_price():
         rate = res['bpi']['USD']['rate_float']
 
         cost = rate * float(bitcoin_amount)
-        
-        return output = "$"+"{:,}".format(cost)
+        output = "$"+"{:,}".format(cost)
+        return ouptut
         
     except requests.RequestException:
         return None
