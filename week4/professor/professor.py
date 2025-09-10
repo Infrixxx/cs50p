@@ -46,7 +46,7 @@ def generate_integer(level):
     
             for a in range(3):
                 answer = input(f"{x} + {y} = ")
-                if answer == correct:
+                if int(answer) == correct:
                     score+=1
                     break
                 else:
@@ -61,7 +61,7 @@ def generate_integer(level):
     
             for a in range(3):
                 answer = input(f"{x} + {y} = ")
-                if answer == correct:
+                if int(answer) == correct:
                     score+=1
                     break
                 else:
@@ -75,7 +75,7 @@ def generate_integer(level):
     
             for a in range(3):
                 answer = input(f"{x} + {y} = ")
-                if answer == correct:
+                if int(answer) == correct:
                     score+=1
                     break
                 else:
