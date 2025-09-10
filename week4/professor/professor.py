@@ -38,12 +38,11 @@ def get_level():
 
 def generate_integer(level):
     if level == 1:
-
-            return random.randint(0,9)
-       elif level == 2 :       
-            return random.randint(10,99)
-        else:
-            return random.randint(100,999)
+        return random.randint(0,9)
+    elif level == 2 :       
+        return random.randint(10,99)
+    else:
+        return random.randint(100,999)
             
 def ask(x, y):
     correct = x + y
