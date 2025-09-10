@@ -38,6 +38,7 @@ def guess():
             if not user_guess.isnumeric():
                 continue
             
+            guess_n = int (user_guess)
             if int(user_guess) < answer:
                 print("Too small!!")
             elif int(user_guess) > answer:
