@@ -27,7 +27,7 @@ def valid_level():
             continue
 
 def guess():
-    n=valid_level()
+    n=int(valid_level())
     answer=random.randint(1,n)
     
     while True:
@@ -37,9 +37,9 @@ def guess():
         try:
             user_guess=input("Guess: ")
             
-            if user_guess < answer:
+            if int(user_guess) < answer:
                 print("Too small!!")
-            elif user_guess > answer:
+            elif int(user_guess) > answer:
                 print("Too large!")
             else:
                 print("Just right!")
