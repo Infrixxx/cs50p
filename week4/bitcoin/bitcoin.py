@@ -16,3 +16,5 @@ bitcoin_amount=sys.argv[1]
 
 if not bitcoin_amount.isnumeric():
         sys.exit("Command-line argument is not a number")
+
+response = requests.get('https://api.example.com/data')
