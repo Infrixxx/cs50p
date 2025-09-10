@@ -32,7 +32,7 @@ def guess():
     
     while True:
         
-        print("Level: {n}")
+        print(f"Level: {n}")
         
         try:
             user_guess=input("Guess: ")
