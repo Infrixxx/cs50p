@@ -26,11 +26,8 @@ def valid_level():
         else:
             continue
 
-n=valid_level()
-print(n)
-
-def guess(n):
-
+def guess():
+    n=valid_level()
     answer=random.randit(1,n)
     
     while True:
