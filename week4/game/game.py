@@ -13,7 +13,7 @@ Conditions:
 """
 
 
-def valid_level()
+def valid_level():
     while True:
         n=input("Level: ")
     
