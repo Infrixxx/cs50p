@@ -29,13 +29,14 @@ def valid_level():
 def guess():
     n=int(valid_level())
     answer=random.randint(1,n)
-    
+    print(f"Level: {n}")
     while True:
-        
-        print(f"Level: {n}")
         
         try:
             user_guess=input("Guess: ")
+
+            if not user_guess.isnumeric():
+                continue
             
             if int(user_guess) < answer:
                 print("Too small!!")
