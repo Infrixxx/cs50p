@@ -12,7 +12,19 @@ Conditions:
     ---> if guess is same as n, "Just right!" and exit
 """
 
-def main():
+
+while True:
+    n=input("Level: ")
+    
+    if n.isnumeric():
+        if n >=1:
+            print(f"the chosen level is {n}")
+            break
+    else:
+        continue
+
+
+"""def main():
 
 def guess(n):
     
@@ -31,4 +43,4 @@ def guess(n):
         except EOFError:
             break
 
-
+"""
