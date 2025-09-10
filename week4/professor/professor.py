@@ -24,7 +24,7 @@ def get_level():
         try:
             level=input("Level: ")
             
-            if level.isnumeric() and int(level) > 1 :
+            if level.isnumeric() and int(level) > 0 :
 
                 level=int(level)
             
