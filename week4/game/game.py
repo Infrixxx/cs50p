@@ -12,7 +12,9 @@ Conditions:
     ---> if guess is same as n, "Just right!" and exit
 """
 
-
+def main():
+    return guess()
+    
 def valid_level():
     while True:
         n=input("Level: ")
@@ -26,17 +28,21 @@ def valid_level():
 
 n=valid_level()
 print(n)
-"""def main():
 
 def guess(n):
+
+    answer=random.randit(1,n)
     
     while True:
+        
+        print("Level: {n}")
+        
         try:
-            n=input("Level: ")
+            user_guess=input("Guess: ")
             
-            if n < rn:
+            if user_guess < answer:
                 print("Too small!!")
-            elif n > rn:
+            elif user_guess > answer:
                 print("Too large!")
             else:
                 print("Just right!")
@@ -45,4 +51,5 @@ def guess(n):
         except EOFError:
             break
 
-"""
+if __name__=="__main__":
+    main()
