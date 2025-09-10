@@ -26,7 +26,7 @@ def adieu():
         fin_indx=len(names)-1
 
     if fin_indx > 1:
-        output_str=", ".join(names[:-1]) + f" and {names[-1]}"
+        output_str=", ".join(names[:-1]) + f", and {names[-1]}"
     elif fin_indx==1:
         output_str=f"{names[0]} and {names[1]}"
     else:
