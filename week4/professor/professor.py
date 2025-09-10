@@ -18,10 +18,12 @@ Calculator game:
 def main():
     level=get_level()
     score=0
-    x=generate_integer(level)
-    y=generate_integer(level)
+
     for q in range(10):
+        x=generate_integer(level)
+        y=generate_integer(level)
         score+=ask(x,y)
+    print(f"Score: {score}")
         
     
     
