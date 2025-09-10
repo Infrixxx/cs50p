@@ -29,7 +29,7 @@ def get_level():
         try:
             level=input("Level: ")
             
-            if level in [1,2,3]:
+            if level in ['1','2','3']:
                 return level
                 break
         except ValueError:
