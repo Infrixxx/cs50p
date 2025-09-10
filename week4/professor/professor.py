@@ -34,7 +34,7 @@ def get_level():
             level=input("Level: ")
             
             if level in ['1','2','3']:
-                return level
+                return int(level)
                 break
         except ValueError:
              continue
