@@ -39,9 +39,13 @@ def guess():
                 continue
             
             guess_n = int (user_guess)
-            if int(user_guess) < answer:
+
+            if guess_n <= 0:
+                continue
+                
+            elif guess_n < answer:
                 print("Too small!!")
-            elif int(user_guess) > answer:
+            elif guess_n > answer:
                 print("Too large!")
             else:
                 print("Just right!")
