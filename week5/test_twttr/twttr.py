@@ -6,7 +6,6 @@ func shorten : removes vowels from words
 """
 
 def main():
-    vowel_remover()
     word = input("Input: ")
     result = shorten(word)
     print(f"Output: {result}")
