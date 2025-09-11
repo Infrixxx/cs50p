@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
-"""
-request user bitcoin ammount from command line
-check if it can be converted to float
-if not sys.exit("Command-line argument is not a number")
-if no argument sys.exit("Missing command-line argument")
-"""
 import requests
 import sys
 
+API_KEY =  ecd96072043d77cc2fe0bfa80636b639ff2e2795a62c49cf4f1d1931b2d139b3 # Replace with your real CoinCap API key
+url = f"https://rest.coincap.io/v3/assets/bitcoin?apiKey={API_KEY}"
+
 def main():
-    arguments_check()
-    get_current_price()    
+    bitcoin_amount = get_arguments()
+    price = get_current_price()
+    cost = bitcoin_amount * price
+    print(f"${cost:,.4f}")  
 
 def arguments_check():
     if len(sys.argv) < 2:
@@ -26,15 +25,11 @@ def arguments_check():
 
 def get_current_price():
     try:
-        url="https://api.coinbase.com/v2/prices/BTC-USD/spot"
     
         response = requests.get(url)
-        res = response.json()
-        rate = res['bpi']['USD']['rate_float']
-
-        cost = rate * float(bitcoin_amount)
-        output = "$"+"{:,}".format(cost)
-        return ouptut
+        response.raise_for_status()  # catch HTTP errors
+        res = response.json() 
+        return float(res["data"]["priceUsd"])
         
     except requests.RequestException:
         return None
