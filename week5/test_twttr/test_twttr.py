@@ -6,3 +6,4 @@ def test_shorten():
     assert shorten("aeiou") == ""
     assert shorten("AEIOU") == ""
     assert shorten("Who are you?") == "Wh r y?"
+    assert shorten("123!") == "123!"
