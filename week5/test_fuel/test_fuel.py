@@ -11,9 +11,9 @@ def test_convert():
     assert convert("99/100") == 99
 
     with pytest.raises(ValueError):
-        convert("str"/2)
+        convert("str/2")
     with pytest.raises(ZeroDivisionError):
-        convert(10/0)
+        convert("10/0")
 
 
 def test_gauge():
