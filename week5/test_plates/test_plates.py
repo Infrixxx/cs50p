@@ -3,7 +3,7 @@
 from plates import is_valid
 
 def test_vanity():
-    assert is_valid("AB123") == True
+    assert is_valid("AB") == True
     assert is_valid("XY7890") == True
     assert is_valid("ZZZ999") == True
     assert is_valid("12BB") == False
