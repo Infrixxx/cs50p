@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from fuel import convert, gauge
+import pytest
 
 def test_convert():
     assert convert("3/4") == 75
@@ -8,6 +9,12 @@ def test_convert():
     assert convert("0/100") == 0
     assert convert("100/100") == 100
     assert convert("99/100") == 99
+
+    with pytest.raises(ValueError):
+        convert("str"/2)
+    with pytest.raises(ZeroDivisionError):
+        convert(10/0)
+
 
 def test_gauge():
     assert gauge(0) == "E"
