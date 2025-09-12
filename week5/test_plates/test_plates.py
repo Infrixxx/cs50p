@@ -7,5 +7,7 @@ def test_vanity():
     assert is_valid("BCR057") == False
     assert is_valid("BC") == True
     assert is_valid("BC078B") == False
-    assert is_valid("071bc") == False
+    assert is_valid("071") == False
+    assert is_valid("ABBCCC") == True
+    assert is_valid("!@#$%") == False
     assert is_valid("tylo75489") == False
