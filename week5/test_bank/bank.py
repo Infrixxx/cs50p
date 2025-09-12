@@ -2,7 +2,7 @@
 
 def main():
     greeting = input("Greeting: ").strip().lower()
-    print(f"$value(greeting)")
+    print(f"${value(greeting)}")
 
 
 def value(greeting):
