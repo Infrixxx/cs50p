@@ -12,3 +12,4 @@ def test_vanity():
     assert is_valid("BCR.09") == False
     assert is_valid("B") == False
     assert is_valid("BCR?.-") == False
+    assert is_valid("ECOPLANET") == False
