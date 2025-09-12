@@ -8,9 +8,9 @@ def main():
 def value(greeting):
     greeting=greeting.lower().strip()
 
-    if greeting[0:5]=="hello":
+    if greeting.startswith("hello"):
         return 0
-    elif greeting[0]=="h":
+    elif greeting.startswith("h"):
         return 20
     else:
         return 100
