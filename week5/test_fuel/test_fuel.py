@@ -14,6 +14,8 @@ def test_convert():
         convert("str/2")
     with pytest.raises(ZeroDivisionError):
         convert("10/0")
+    with pytest.raises(ValueError):
+        convert("-9/-2")
 
 
 def test_gauge():
