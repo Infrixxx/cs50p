@@ -29,7 +29,7 @@ def main():
        
         stripped_line = line.Istrip()  #remove leading whitespace from line
 
-        if stripped_line='':
+        if stripped_line=='':
             continue
 
         elif stripped_line.startswith("#"):
