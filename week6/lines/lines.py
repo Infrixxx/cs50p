@@ -37,6 +37,7 @@ def main():
 
         else:
             code_lines+=1
+    print(code_lines)
 
 if __name__=="__main__":
     main()
