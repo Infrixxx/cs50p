@@ -10,7 +10,7 @@ def main():
     if len(sys.argv) < 2:
         sys.exit("Too few command-line arguments")
     elif len(sys.argv) > 2:
-        sys.exit("Too many command-line arguments")i
+        sys.exit("Too many command-line arguments")
 
     filename= argv[1]
 
