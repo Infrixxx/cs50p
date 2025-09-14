@@ -6,7 +6,7 @@ Check if it's a valid filename.
 """
 
 if len(sys.argv) != 2 or not sys.argv[1].endswith(".py"):
-    sys.exit("Invalid arguments.")
+    sys.exit("maaka.")
 
 try:
     with open(sys.argv[1]) as file:
