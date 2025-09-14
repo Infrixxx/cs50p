@@ -18,10 +18,13 @@ if len(sys.argv) < 2 :
 if len(sys.argv) > 2 :
     sys.exit("Too many command-line arguments")
 
-if not sys.argv[1].endswith(".csv"):
+filename=sys.argv[1]
+
+if not filename].endswith(".csv"):
     sys.exit("Not a CSV file")
+
 try:
-    with open(sys.argv[1],r ) as file:
+    with open(filename,r ) as file:
         lines=file.readline()
 except FileNotFoundError:
     sys.exit("File Does not exist")
