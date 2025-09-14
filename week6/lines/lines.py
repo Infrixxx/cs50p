@@ -15,7 +15,7 @@ def main():
     filename= argv[1]
 
     if not filename.endswith(".py"):
-        sys.exit("Not a Python file")i
+        sys.exit("Not a Python file")
 
     try:
         with open(filename,'r') as file:
