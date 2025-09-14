@@ -10,7 +10,7 @@ conditions:
 
 import sys
 import csv
-import tabulate
+from tabulate import tabulate
 
 if len(sys.argv) < 2 :
     sys.exit("Too few command-line arguments")
@@ -20,11 +20,15 @@ if len(sys.argv) > 2 :
 
 filename=sys.argv[1]
 
-if not filename].endswith(".csv"):
+if not filename.endswith(".csv"):
     sys.exit("Not a CSV file")
 
 try:
-    with open(filename,r ) as file:
-        lines=file.readline()
+    with open(filename,'r' ) as file:
+        reader = csv.reader(file)
+
+        table = list(reader)
+
+        print(tabulate(table, headers="firstrow", tablefmt="grid"))
 except FileNotFoundError:
     sys.exit("File Does not exist")
