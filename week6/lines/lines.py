@@ -12,7 +12,7 @@ def main():
     elif len(sys.argv) > 2:
         sys.exit("Too many command-line arguments")
 
-    filename= argv[1]
+    filename= sys.argv[1]
 
     if not filename.endswith(".py"):
         sys.exit("Not a Python file")
@@ -27,7 +27,7 @@ def main():
 
     for line in lines:
        
-        stripped_line = line.Istrip()  #remove leading whitespace from line
+        stripped_line = line.lstrip()  #remove leading whitespace from line
 
         if stripped_line=='':
             continue
